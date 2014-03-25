@@ -1,9 +1,9 @@
-Responsive-Design-Best-Practices
+Responsive Design Best Practices
 ================================
 
 Hey! So you want to go responsive? I’m proud of you. There is a lot of info out there, so let’s see how to get started!
 
-First, what is responsive design?
+### First, what is responsive design?
 
 Being responsive allows you to use the same code to serve different platforms and devices, which reduces the amount of requests made to fetch resources. A mobile-first approach is trending heavily now, which forces you to approach the development and design of a website from a broader perspective than a traditional desktop site. So how do we do this?
 
