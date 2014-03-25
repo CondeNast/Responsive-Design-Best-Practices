@@ -1,7 +1,6 @@
 Responsive-Design-Best-Practices
 ================================
 
-Responsive Design Best Practices
 Hey! So you want to go responsive? I’m proud of you. There is a lot of info out there, so let’s see how to get started!
 
 First, what is responsive design?
