@@ -19,7 +19,7 @@ Follow common markup practices! Create a container (or wrapper!) element, with h
 
 IDs usually describe a unique “section”, and classes make up different parts of that section. Navigation is a unique section. The different steps of the subscribe pages each have unique IDs but share common classes.
 
-'''
+```
 <div id="step1" class="steps unfolded">
 	<div class="step-header">
 	...
@@ -36,8 +36,8 @@ IDs usually describe a unique “section”, and classes make up different parts
 	</div>
 	<div class="step-body">
 		...	
+```
 
-'''
 
 CSS
 
@@ -45,7 +45,7 @@ Inline styles!? Move those bad boys into semantically fresh stylesheets and take
 
 In addition the more specific you are with your declarations the more precise you have to be overwriting them. So if you use parent classes for one style and want to change the rule for mobile, you have to be just as precise.
 
-
+```
 #step1 .step-details #offer-2 {
 	margin-left:33px;
 	background-position: -489 -44;
@@ -57,10 +57,10 @@ In addition the more specific you are with your declarations the more precise yo
 	margin-left: 23px;
 }
 
-
+```
 The one instance you can supercede a previous rule without matching the class structure is by using the “!important” declaration.
 
-
+```
 #step1 .step-details #offer-2 {
 	margin-left:33px;
 	background-position: -489 -44;
@@ -71,7 +71,7 @@ The one instance you can supercede a previous rule without matching the class st
 #step1 #offer-2 {
 	margin-left: 23px !important;
 }
-
+```
 
 
 You’ve probably heard of LESS and SASS, which are great tools for larger projects with lots of nested styles. They also allow you to use variables and some computations and need to be compiled ahead of time (browsers can’t read .less or .sass files). We won’t need them for this project, but I personally like LESS.
@@ -83,7 +83,9 @@ There is still a lot of debate on how to handle images in a responsive format. T
 
 The most important style for responsive images is max-width. Check this out:
 
+```
 img { max-width: 100%; }
+```
 
 This tells the image to be as big as it’s container, until it’s natural size is met. So that 768x568 image scales down to 500px when it’s parent container is 500px! So handy. Just remember to set its parent container’s width explicitly.
 
@@ -95,20 +97,22 @@ Similar to max-width, this style makes the background fluid and respond to the v
 
 Another thing we need to overcome is iOS resizing the page automatically. To overcome this and make the page respond responsively, we need to adjust how the browser sees the widths of the images. Adding this to the <head> will compensate!
 
-
+```
 <meta name="viewport" content="width=device-width; initial-scale=1.0">
-
+```
 
 Media Queries
 
 Whether it’s a fluid design or multi-column, a responsive website needs to be told how to react to the different widths of their viewports. The most popular and useful way is through media queries, which allow us to specify a block of code for specific instances. If we want to hide the navbar only on mobile devices with widths smaller than 380px, we would use a media query to make that happen.
 
+```
 @media screen and (max-width : 380px) {
 	#navbar { display : none; }
 }
-
+```
 Using multiple media queries allow us to target specific ranges of widths, which translates to devices. These cascade just like regular styles, so we can overwrite previous styles. We can also combine them in a single declaration.
 
+```
 /* iPhone portrait */
 @media screen and (min-width : 320px) {
 }
@@ -117,6 +121,7 @@ Using multiple media queries allow us to target specific ranges of widths, which
 @media screen and (max-width : 380px) {
 	#navbar { display : none; }
 }
+```
 
 There are a lot of tutorials online, so we won’t go in depth here, but with responsive design I’ve encountered two main philosophies: Create breakpoints per device or per design. What this means is you can code for an iPhone or iPad like above, where you know the width. But with new devices coming out all the time, I believe the best approach is to come up with a fluid design that molds itself to any screen width. This creates media queries with different max and min widths that aren’t linked to devices but rather to the design.
 
@@ -144,20 +149,21 @@ Javascript
 
 Want to take that responsive design to the next level? Use some Javascript and make that puppy more robust. Combine “data” HTML5 attributes with some code and you can specify low and hi res images.
 
+```
 <img src=”...jpg” data-hi-res=”...@2x.jpg” />
+```
 
 Another thing to remember is click events behave differently on touch screens than via the traditional mouse clicks. Touch events are best bound through touch declarations. Using an event handling library will help, or a creative binding hierarch, but plan a strategy to avoid double events and sluggish behavior.
 
 https://coderwall.com/p/bdxjzg
 
+```
 $(‘.link’).on('click touchstart touchmove touchend', function(e){
-
+```
 
 Other notes
 
 Responsive design eliminates redirections and subdomains that we see when using solutions like Mobify, reduces redundant code, and makes maintenance a lot easier. The additional planning and strategy time incurred in the beginning is well justified given the benefits of the responsive strategy.
-
-
 
 
 
