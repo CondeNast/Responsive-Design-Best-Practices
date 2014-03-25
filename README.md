@@ -35,7 +35,11 @@ IDs usually describe a unique “section”, and classes make up different parts
 	...
 	</div>
 	<div class="step-body">
-		...	
+		<div class="step-details">
+		...
+		</div>
+	</div>
+</div>
 ```
 
 
