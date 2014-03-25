@@ -9,7 +9,7 @@ Being responsive allows you to use the same code to serve different platforms an
 
 The basics:
 
-HTML
+## HTML
 
 Start by creating lean HTML markup with unique IDs and classes that help describe the role of the element. 
 
@@ -39,7 +39,7 @@ IDs usually describe a unique “section”, and classes make up different parts
 ```
 
 
-CSS
+## CSS
 
 Inline styles!? Move those bad boys into semantically fresh stylesheets and take advantage of cascading power! (Cascading is the Machiavellian approach of overwriting previous styles with new ones later in the document, which comes in handy for responsive as we’ll see). The reason we shy away from inline is because it’s separate from the rest of the code and harder to debug. It also acts as the final rule and overrides any code in the stylesheets.
 
@@ -77,7 +77,7 @@ The one instance you can supercede a previous rule without matching the class st
 You’ve probably heard of LESS and SASS, which are great tools for larger projects with lots of nested styles. They also allow you to use variables and some computations and need to be compiled ahead of time (browsers can’t read .less or .sass files). We won’t need them for this project, but I personally like LESS.
 
 
-Images
+## Images
 
 There is still a lot of debate on how to handle images in a responsive format. That 2000x2000 background looks great on a desktop but crushes your load time on a mobile device. Still, there are things we can do to optimize the site across devices.
 
@@ -101,7 +101,7 @@ Another thing we need to overcome is iOS resizing the page automatically. To ove
 <meta name="viewport" content="width=device-width; initial-scale=1.0">
 ```
 
-Media Queries
+## Media Queries
 
 Whether it’s a fluid design or multi-column, a responsive website needs to be told how to react to the different widths of their viewports. The most popular and useful way is through media queries, which allow us to specify a block of code for specific instances. If we want to hide the navbar only on mobile devices with widths smaller than 380px, we would use a media query to make that happen.
 
@@ -126,13 +126,13 @@ Using multiple media queries allow us to target specific ranges of widths, which
 There are a lot of tutorials online, so we won’t go in depth here, but with responsive design I’ve encountered two main philosophies: Create breakpoints per device or per design. What this means is you can code for an iPhone or iPad like above, where you know the width. But with new devices coming out all the time, I believe the best approach is to come up with a fluid design that molds itself to any screen width. This creates media queries with different max and min widths that aren’t linked to devices but rather to the design.
 
 
-Frameworks
+## Frameworks
 
 Twitter created the now-famous Bootstrap framework which utilizes leading edge CSS3/HTML5/JS to create a mobile-first approach to responsive design. They make it easy to have responsive column layouts based on a grid structure where the page is divided into 12 columns, either using set widths or percentages. Each column can then span any number of columns up to 12, giving flexibility to the overall column width. Then the container class is triggered by media queries and adjusts the overall width, with each column being automatically adjusted. It’s best to see an example.
 
 http://getbootstrap.com/css/
 
-Libraries
+## Libraries
 
 Don’t recreate the responsive wheel! Take advantage of what’s out there to help your project.
 
@@ -145,7 +145,7 @@ Use Modernizr to see what features and capabilities are present with your curren
 http://modernizr.com/
 
 
-Javascript
+## Javascript
 
 Want to take that responsive design to the next level? Use some Javascript and make that puppy more robust. Combine “data” HTML5 attributes with some code and you can specify low and hi res images.
 
@@ -161,13 +161,13 @@ https://coderwall.com/p/bdxjzg
 $(‘.link’).on('click touchstart touchmove touchend', function(e){
 ```
 
-Other notes
+## Other notes
 
 Responsive design eliminates redirections and subdomains that we see when using solutions like Mobify, reduces redundant code, and makes maintenance a lot easier. The additional planning and strategy time incurred in the beginning is well justified given the benefits of the responsive strategy.
 
 
 
-Responsive websites
+### Responsive websites
 
 Mashable is a great example of responsive design. The site still uses Wordpress too!
 
