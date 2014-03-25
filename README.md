@@ -19,7 +19,7 @@ Follow common markup practices! Create a container (or wrapper!) element, with h
 
 IDs usually describe a unique “section”, and classes make up different parts of that section. Navigation is a unique section. The different steps of the subscribe pages each have unique IDs but share common classes.
 
-'''html
+'''
 <div id="step1" class="steps unfolded">
 	<div class="step-header">
 	...
