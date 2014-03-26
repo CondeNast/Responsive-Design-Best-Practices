@@ -1,0 +1,771 @@
+<html>
+<head>
+	<style>
+	/* Base styles for desktop that are overwritten for responsive via cascading media queries */
+	body {
+		background-image:url(https://subscribe.bonappetit.com/circulation/bonappetit/images/BA-HYBRID-Backgroud.jpg);
+		margin-left:auto;
+		margin-right:auto;
+		font-family: Verdana,Arial,sans-serif;
+		font-size: 100%;
+		line-height: 1.375;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	img {
+		max-width:100%;
+	}
+
+	.clearfix:after, .banner:after, .mod-b:after, .gallery__pager:after, .account-summary__thanks:after, .tabs-nav:after, .media:after, .header__banner:after, .form-row:after, .radio-cards:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	#header {
+	    max-width:1235px;
+	    margin-left:auto;
+	    margin-right:auto;
+	}
+	.sub-header {
+		text-align: center;
+	}
+
+	#content {
+		width:1002px;
+		margin:0 auto;
+	}
+
+	.folded .step-body {
+		display:none;
+	}
+
+	.unfolded .step-body {
+		display:block;
+	}
+
+	.step-body {
+		background: url('https://subscribe.bonappetit.com/circulation/bonappetit/images/BlueBackground2014.png') repeat-y;
+		overflow: hidden;
+	}
+
+	.step-details{
+		position: relative;
+		padding: 43px 0 0 0;
+	}
+
+	.sub-footer {
+		padding:15px 0 0 0;
+		clear:both;
+	}
+
+	#step1 .sub-footer {
+		padding: 0;
+	}
+
+	.step-details {
+		margin-left:80px;
+	}
+
+	#step1 .best-offer-ribbon {
+		position: absolute;
+		top: 35px;
+	}
+
+	#step1 .offer-link {
+		display: block;
+		text-decoration: none;
+		border: 4px solid transparent; // offset the black border for checkbox positioning
+	}
+
+	#step1 .offer-link:hover {
+		border: 4px solid #000;
+		border-radius: 10px;
+	}
+
+	#step1 .step-details {
+		background-image: url('https://subscribe.bonappetit.com/circulation/bonappetit/images/NEW_BNAOFFERSFeb2014.png');
+		background-repeat: no-repeat;
+		background-position: -17 0;	
+	}
+
+
+	#step1 .offers,
+	#step1 #gift-offer {
+		display: block;
+		width:382px;
+		height:211px;
+		float: left;
+		margin-left: 47px;
+	}
+
+	#step1 .check-option {
+		position: relative;
+		top:23px;
+		left:42%;
+	}
+
+	#step1 #offer-2 .check-option {
+		left:41%;
+	}
+
+	#step1 .check-option span {
+		display: block;
+		background-repeat: no-repeat;
+		width:25px;
+		height:25px;		
+	}
+
+	#step1 .check-option span{
+		background-image: url(https://subscribe.bonappetit.com/circulation/golfdigest/images/GLFRadiosOff2014.gif);
+	}
+
+	#step1 .checked .check-option span{
+		background-image: url(https://subscribe.bonappetit.com/circulation/golfdigest/images/GLFRadiosOn2014.gif);
+	}
+
+	#step1 .offers h5 {
+		color:#22b9f1;
+		font-size:16px;
+		font-weight:bold;
+		margin: 40% 0 0 47%;
+		width: 195px;
+		padding: 0;
+	}
+
+	#step1 .step-details #offer-1 {
+		background-position: -69 -45;
+	}
+
+	#step1 .step-details #offer-2 {
+		margin-left:33px;
+		background-position: -489 -44;
+	}
+
+	#step1 #gift-offer {
+		width:100%;
+		height:69px;
+		float:none;
+		background-position: -18 -270;
+	}
+
+	#step2 .step-details {
+		margin: 0;
+		padding:0;
+		background-image: url('https://subscribe.bonappetit.com/circulation/bonappetit/images/BAoffer2014cab.png');
+		background-repeat: no-repeat;
+		background-position: 50% 35px;
+		height: 320px;
+	}
+
+	#step2 .payments {
+		width:383px;
+		height:216px;
+		float: left;
+		margin: 36px 0 0 95px;
+		display: block;
+		text-decoration: none;
+		border: 4px solid transparent; /* offset the black border for checkbox positioning */
+	}
+
+	#step2 .payments:hover,
+	#step2 .payments.active {
+		border: 4px solid #000;
+		border-radius: 10px;
+	}
+
+	#step2 #payment-2.payments {
+		margin-left: 31px;
+	}
+
+	#step3 .step-details {
+		margin:0 auto;
+		width: 800px;
+	}
+
+	.selections,
+	.folded .selection.hidden,
+	.unfolded.selected-step .selections{
+		display: none;
+	}
+
+	.folded .selections {
+		padding: 15px 15px 15px 98px;
+		background-image: url(https://subscribe.bonappetit.com/circulation/bonappetit/images/GreyBackground2014.png);
+		box-sizing: content-box;
+		font-style: italic;
+	}
+
+	.selected-step .selections {
+		display:block;
+	}
+
+	.selection a,
+	.selection a:visited {
+		color: #000;
+		text-decoration: underline;
+	}
+
+	.selections h4 {
+		margin:0;
+	}
+
+	.text input {
+		width:100%;		
+		height: 36px;
+		border: 1px solid #d6d6d6;
+		padding: 10px 14px;
+		font-size: 16px;
+		background: #fff;
+	}
+
+	.form-fields {
+		padding: 0 0 20px;
+	}
+
+	.form-col {
+		width: 49.57983%;
+		float: left;
+		margin-right: .84034%;
+	}
+
+	.form-col.form-col--sm {
+		width: 24.36975%;
+		float: left;
+		margin-right: .84034%;
+	}
+
+	.form-col.is-last {
+		float: right;
+		margin-right: 0;
+	}
+
+	.margin-bl {
+		margin-bottom: 20px!important;
+	}
+
+	.mod-a__sub-hdg__quiet {
+		font-size: 12px;
+		font-size: .75rem;
+		font-family: Verdana,Arial,sans-serif;
+		color: #000;
+	}
+
+	.text,
+	.select {
+		margin: 0 0 15px;
+		position: relative;
+	}
+
+	.text select,
+	.select select {
+		padding: 5px 14px 5px 12px;
+	}
+
+	.text input,
+	.text select,
+	.select input,
+	.select select {
+		height: 36px;
+	}
+
+	.text input, .text select, .text textarea, .select input, .select select, .select textarea {
+		border: 1px solid #d6d6d6;
+		padding: 10px 14px;
+		font-size: 16px;
+		background: #fff;
+	}
+
+	.text input, .text select, .text textarea, .select input, .select select, .select textarea {
+		width: 100%;
+	}
+
+	.text-xxsm, .main--confirm .trending, .input-link {
+		font-family: Verdana,Arial,sans-serif;
+		font-size: 12px;
+		font-size: .75rem;
+	}
+
+	.btn-next {
+		display: inline-block;
+		margin-bottom: 10px;
+		padding: 0 11px 0 0;
+		height: 55px;
+		width: 400px;
+		border: 0;
+		color: #fff200;
+		font-size: 23px;
+		font-size: 1.4375rem;
+		line-height: 55px;
+		text-shadow: 0 1px 1px rgba(0,0,0,.65);
+		text-indent: -245px;
+		background: url('https://subscribe.bonappetit.com/circulation/bonappetit/images/BASubmit20feb2014a.png') no-repeat;
+		vertical-align: middle;
+		outline: 0;
+		text-align: center;
+		font-family: "NeutrafaceTextBold";
+		font-weight: 400;
+	}
+
+	#footer {
+		color:#fff;
+		text-align: center;
+		font-size: 10px;
+		padding:50px 60px 30px;
+		box-sizing: border-box;
+	}
+
+	/* 
+	 * In this example we are cascading from the largest screen size to the smallest. 
+	 * It's personal preference to what you are most comfortable understanding.
+	 * I did it this way since a lot of the screen sizes share common code.
+	 */
+
+	/* Everything up to iPad landscape */
+	@media screen and (max-width : 1024px) {
+		#wrapper {
+		    max-width:100%;
+		    padding:0 10px;
+			box-sizing: border-box;
+		}
+
+		#wrapper,
+		#header,
+		#content {
+		    max-width:100%;
+			box-sizing: border-box;
+		}
+
+		.step-body {
+			background-size:contain;
+		}
+			
+		#step3 .step-details {
+			margin: 0 auto;
+			width: 800px;
+		}
+	}
+
+	/* Everything up to iPad portrait */
+	@media screen and (max-width : 768px) {
+
+		.step-details {
+			margin-left:24px;
+			background-size: contain;
+			padding: 32px 0 0 0;
+		}
+
+		#step1 .best-offer-ribbon {
+			top: 23px;
+			width: 125px;
+		}
+
+		#step1 .best-offer-ribbon img {
+			height: auto;
+		}
+
+		#step1 .offers {
+			width: 302px;
+			height: 170px;
+			margin-left: 33px;
+		}
+
+		#step1 .check-option {
+			top: 15px;
+			left: 123px;
+		}
+
+		#step1 #offer-2 .check-option {
+			left: 121px;
+		}
+
+		#step1 .step-details #offer-2 {
+			margin-left: 23px;
+		}
+
+		#step1 .offers h5 {
+			font-size: 13px;
+			margin: 36% 0 0 136px;
+		}
+
+		#step1 #gift-offer {
+			height: 58px;
+		}
+
+		#step2 .step-details {
+			background-size: 85%;
+			height: 260px;
+		}
+
+		#step2 .payments {
+			width: 301px;
+			height: 170px;
+			margin: 35px 0 0 54px;
+		}
+
+		#step2 #payment-2.payments {
+			margin-left: 23px;
+		}	
+
+		#step3 .step-details {
+			width: 675px;
+		}
+
+	}
+
+	/* iPhone portrait */
+	@media screen and (min-width : 320px) {
+	}
+
+	/* iPhone landscape */
+	@media screen and (min-width : 380px) {
+	}
+
+	</style>
+
+<!--[if !IE]>
+	<style>
+	label {
+		position: absolute !important;
+		overflow: hidden;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		border: 0;
+		clip: rect(1px, 1px, 1px, 1px);
+	}
+	<style>
+<![endif]-->
+
+
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<img src="https://subscribe.bonappetit.com/circulation/bonappetit/images/BA-HYBRID-HEader_NEW.png" />
+			<div class="sub-header">
+				<img src="https://subscribe.bonappetit.com/circulation/bonappetit/images/BNALinksMAR2014B.png" border="0" usemap="#giftlinks" />
+			</div>
+		</div>
+		<div id="content">
+			<div id="step1" class="steps unfolded">
+				<div class="step-header">
+					<img src="https://subscribe.bonappetit.com/circulation/bonappetit/images/Step12014.png">
+				</div>
+				<div class="step-body">
+					<div class="step-details">
+						<div class="best-offer-ribbon">
+							<img width="166px" height="91px" src="https://subscribe.bonappetit.com/circulation/bonappetit/images/BNABestoffertest1.png" >
+						</div>
+						<a id="offer-1" href="#" class="offers offer-link" data-selection="1">
+							<div class="check-option"><span></span></div>
+							<h5>$19.99 for 12 months</h5>
+						</a>
+						<a id="offer-2" href="#" class="offers offer-link" data-selection="2">
+							<div class="check-option"><span></span></div>
+							<h5>$15 for 12 months</h5>
+						</a>
+						<div class="sub-footer">
+							<div id="gift-offer"></div>
+						</div>
+					</div>
+				</div><!-- /step body -->
+    			<div class="selections">
+    				<h4 class="selection-1 selection hidden">YOU SELECTED: <a href="#">THE PRINT AND DIGITAL SUBSCRIPTION</a></h4>
+    				<h4 class="selection-2 selection hidden">YOU SELECTED: <a href="#">THE PRINT SUBSCRIPTION</a></h4>
+    			</div>
+			</div><!-- /step1 -->
+			<div id="step2" class="steps folded">
+				<div class="step-header">
+					<img src="https://subscribe.bonappetit.com/circulation/bonappetit/images/BA-HYBRID-ORDERFORM_Step_2_preferred.JPG">
+				</div>
+				<div class="step-body">
+					<div class="step-details">
+						<a id="payment-1" class="payments" href="#" data-selection="1"></a>
+						<a id="payment-2" class="payments" href="#" data-selection="2"></a>
+						<div class="sub-footer"></div>
+					</div>
+				</div><!-- /step body-->
+    			<div class="selections">
+    				<h4 class="selection-1 selection hidden">YOU CHOSE: <a href="#">PAY WITH AMAZON</a></h4>
+    				<h4 class="selection-2 selection hidden">YOU CHOSE: <a href="#">PAY WITH BON APP&Eacute;TIT</a></h4>
+    			</div>
+			</div><!-- /step2 -->
+			<div id="step3" class="steps folded">
+				<div class="step-header">
+					<img src="https://subscribe.bonappetit.com/circulation/bonappetit/images/Step32014.png">
+				</div>
+				<div class="step-body">
+					<div class="step-details">
+						<div class="form-fields">
+		    				<div class="form-row">
+		    					<div class="form-col text">
+		    						<label for="first-name">First name</label>
+		    						<input type="text" name="first_name" id="first-name" placeholder="First name" required value="" /> 
+		    					</div>
+		    					<div class="form-col is-last text">
+		    						<label for="last-name">Last name</label>
+		    						<input type="text" name="last_name" id="last-name" placeholder="Last name" required value="" /> 
+		    					</div>
+		    				</div>
+		    				<div class="form-row">
+		    					<div class="form-col text">
+		    						<label for="address">Mailing address 1</label>
+		    						<input type="text" name="address" id="address" placeholder="Mailing address 1" required value="" /> 
+		    					</div>
+		    				</div>
+		    				<div class="form-row">
+		    					<div class="form-col text">
+		    						<label for="address2">Mailing address 2</label>
+		    						<input type="text" name="address2" id="address-2" placeholder="Mailing address 2" value="" /> 
+		    					</div>
+		    				</div>
+		    				<div class="form-row">
+		    					<div class="form-col form-col--sm text">
+		    						<label for="postal-code">Zip</label>
+		    						<input type="text" name="postal_code" id="postal-code" placeholder="Zip" required value="" /> 
+		    					</div>
+
+		    					<div class="form-col text">
+		    						<label for="city">City</label>
+		    						<input type="text" name="city" id="city" placeholder="City" required value="" /> 
+		    					</div>
+
+		    					<div class="form-col form-col--sm is-last select">
+		    						<label for="state"> </label>
+		    						<select name="state" id="state" required>
+		    							<option value="">State</option>
+		    							<option value="AK">AK</option>
+		    							<option value="AL">AL</option>
+		    							<option value="AR">AR</option>
+		    							<option value="AZ">AZ</option>
+		    							<option value="CA">CA</option>
+		    							<option value="CO">CO</option>
+		    							<option value="CT">CT</option>
+		    							<option value="DC">DC</option>
+		    							<option value="DE">DE</option>
+		    							<option value="FL">FL</option>
+		    							<option value="GA">GA</option>
+		    							<option value="HI">HI</option>
+		    							<option value="IA">IA</option>
+		    							<option value="ID">ID</option>
+		    							<option value="IL">IL</option>
+		    							<option value="IN">IN</option>
+		    							<option value="KS">KS</option>
+		    							<option value="KY">KY</option>
+		    							<option value="LA">LA</option>
+		    							<option value="MA">MA</option>
+		    							<option value="MD">MD</option>
+		    							<option value="ME">ME</option>
+		    							<option value="MI">MI</option>
+		    							<option value="MN">MN</option>
+		    							<option value="MO">MO</option>
+		    							<option value="MS">MS</option>
+		    							<option value="MT">MT</option>
+		    							<option value="NC">NC</option>
+		    							<option value="ND">ND</option>
+		    							<option value="NE">NE</option>
+		    							<option value="NH">NH</option>
+		    							<option value="NJ">NJ</option>
+		    							<option value="NM">NM</option>
+		    							<option value="NV">NV</option>
+		    							<option value="NY">NY</option>
+		    							<option value="OH">OH</option>
+		    							<option value="OK">OK</option>
+		    							<option value="OR">OR</option>
+		    							<option value="PA">PA</option>
+		    							<option value="RI">RI</option>
+		    							<option value="SC">SC</option>
+		    							<option value="SD">SD</option>
+		    							<option value="TN">TN</option>
+		    							<option value="TX">TX</option>
+		    							<option value="UT">UT</option>
+		    							<option value="VA">VA</option>
+		    							<option value="VT">VT</option>
+		    							<option value="WA">WA</option>
+		    							<option value="WI">WI</option>
+		    							<option value="WV">WV</option>
+		    							<option value="WY">WY</option>
+		    						</select>
+		    					</div>
+		    				</div>
+		    				<div class="form-row">
+		    					<div class="form-col text">
+		    						<label for="email">E-mail address<span class="label-note"></span></label>
+		    						<input autocomplete="off" type="email" name="email" id="email" placeholder="E-mail address" required value="">
+		    					</div>
+		    					<div class="form-col is-last text">
+		    						<label for="email-confirm">Confirm e-mail address</label>
+		    						<input autocomplete="off" type="email" name="email-confirm" id="email-confirm" placeholder="Confirm e-mail address" class="js-equals" required value="" /> 
+		    					</div>
+		    					<div class="mod-a__sub-hdg__quiet margin-bl">Will be used in accordance with our <a href="http://www.condenast.com/privacy-policy" target="_blank">Privacy Policy</a>.</div>
+		    				</div>
+		    			</div>
+
+			    		<h3 class="mod-a__sub-hdg"><img src="https://subscribe.bonappetit.com/circulation/bonappetit/images/BA-HYBRIDODFROM1aa.png">
+			    			<br /><span class="mod-a__sub-hdg__quiet">You will only be billed after your free month. You may cancel any time.</span>
+			    		</h3>
+
+			    		<div class="form-fields">
+			    			<div class="form-row">
+			    				<div class="form-col text">
+			    					<label for="cc-number">Credit card number</label>
+			    					<input class="cc-number required" type="text" name="credit_card_number" id="cc-number" placeholder="Credit card number" autocomplete="off" pattern="\d*" novalidate>
+			    				</div>
+			    				<div class="form-col is-last"><img id="payimg" class="margin-ts" src="https://subscribe.bonappetit.com/circulation/bonappetit/images/BACC2014.png"  alt=""  ></div>
+			    			</div>
+			    			<div class="form-row">
+			    				<div class="form-col form-col--sm select">
+			    					<label for="exp-date-month" class="is-vishidden">Month</label>
+			    					<select id="exp-date-month" name="credit_card_exp_month" required>
+			    						<option value="">Exp. month</option>
+			    						<option value="01">Jan</option>
+			    						<option value="02">Feb</option>
+			    						<option value="03">Mar</option>
+			    						<option value="04">Apr</option>
+			    						<option value="05">May</option>
+			    						<option value="06">Jun</option>
+			    						<option value="07">Jul</option>
+			    						<option value="08">Aug</option>
+			    						<option value="09">Sep</option>
+			    						<option value="10">Oct</option>
+			    						<option value="11">Nov</option>
+			    						<option value="12">Dec</option>
+			    					</select>
+			    				</div>
+			    				<div class="form-col form-col--sm select">
+			    					<label for="exp-date-year" class="is-vishidden">Year</label>
+			    					<select id="exp-date-year" name="credit_card_exp_year" required>
+			    						<option value="">Exp. year</option>			    							
+			    						<option value="2014">2014</option>
+			    						<option value="2015">2015</option>
+			    						<option value="2016">2016</option>
+			    						<option value="2017">2017</option>
+			    						<option value="2018">2018</option>
+			   							<option value="2019">2019</option>
+			   							<option value="2020">2020</option>
+			   							<option value="2021">2021</option>
+			   							<option value="2022">2022</option>
+			   							<option value="2023">2023</option>
+			   							<option value="2024">2024</option>
+			   							<option value="2025">2025</option>
+		    						</select>
+		    					</div>
+		    					<div class="form-col form-col--sm select">    						
+		    					</div>
+		    				</div>
+		    			</div>
+		    			<div class="margin-tl margin-bm text-xxsm">
+			   				<b><u>Subscribers' Automatic Renewal Feature:</u></b><br> 
+			    Your subscription will be automatically renewed unless you tell us to stop. Before the start of each renewal, you will be sent a reminder notice stating the term and rate then in effect. If you do nothing, your credit/debit card will be charged or you will be sent an invoice for your subscription. You may cancel at any time during your subscription and receive a full refund for unmailed issues.
+			    		</div>
+			    			
+			    		<div class="form-fields">
+			    			<div class="form-row">
+			   					<button type="submit" class="btn-next btn-next--f">Subscribe</button>
+			   				</div>
+			   			</div>
+					</div><!-- /step details-->
+				</div><!-- step body -->
+			</div><!-- /step3 -->
+			<div id="step4" class=" steps folded">
+				<div class="step-header">
+					<img src="https://subscribe.bonappetit.com/circulation/bonappetit/images/Step42014.png" class="step4">
+				</div>
+			</div><!-- /step4 -->
+		
+		   	<!-- begin footer -->
+		   	<div id="footer">
+			  	<p>Customer Service can be reached at <a href="http://www.bonappetit.com/customerservice" target="_blank">www.bonappetit.com/customerservice</a> or 1-800-405-8085.</p>
+				<p>Subscribers: If the Post Office alerts us that your magazine is undeliverable, we have no further obligation unless we receive a corrected address within one year. All orders subject to approval. By ordering, you agree not to resell any subscriptions purchased from this site.</p>
+			  	<p>Plus sales tax where applicable.  	
+			  	<p>To learn more about our information practices and your privacy rights, <a href="http://www.bonappetit.com/services/privacypolicy/" target="_blank">click here</a></p>
+			  	<p>Use of this site constitutes acceptance of our <a href="http://www.bonappetit.com/services/useragreement/" target="_blank">User Agreement</a> and <a href="http://www.bonappetit.com/services/useragreement/" target="_blank">Privacy Policy</a> <a href="http://www.condenast.com/privacy-policy#privacypolicy-california">(Your CA Privacy Rights)</a></p>
+			  	<p>Copyright &copy; 2014 Cond&eacute; Nast. All rights reserved.</p>
+			</div><!-- end footer -->
+
+		</div><!-- /content -->
+	</div><!-- /wrapper -->
+	<script src="https://subscribe.bonappetit.com/circulation/shared/scripts/mbox/js/jquery-1.8.3.js"></script>
+	<script type='text/javascript' src="https://subscribe.bonappetit.com/circulation/glamour/scripts/jquery.infieldlabel.min.js"></script>
+	<script type="text/javascript" src="https://subscribe.bonappetit.com/circulation/teenvogue/scripts/js/jquery-ui.js"></script>
+	<script>
+		var CN = typeof(CN) != 'undefined' ? CN : {};
+		CN.offers = (function(){
+			return {
+				changeToStep : function(stepNum){
+					//collapse all bodies
+					$('.steps').removeClass('unfolded').addClass('folded');
+
+					//step specific logic
+					if(stepNum == 1){
+						$('#step1 #selections').hide();
+						$('#step1 .selection').addClass('hidden');
+					}
+
+					//open step
+					$('#step'+stepNum).removeClass('folded').addClass('unfolded');
+				},
+				bindLinks : function(){
+					//step1 selection change
+					$('#step1 .selection a').unbind();
+					$('#step1 .selection a').on('click', function(){
+						CN.offers.changeToStep('1');
+						return false;
+					});
+
+					//step2 selection change
+					$('#step2 .selection a').unbind();
+					$('#step2 .selection a').on('click', function(){
+						CN.offers.changeToStep('2');
+						return false;
+					});
+				}
+			}
+		})();
+
+		jQuery(document).ready(function ($) { /* only include 1 doc ready function */
+			if ( $.browser.msie ) {
+				if(parseInt($.browser.version, 10) < 9){
+				}
+			} else {
+				$("label").inFieldLabels();
+				$("label").html("");
+			}
+
+			$('.offers').on('click', function(){
+				var $this = $(this),
+					selection = $this.data('selection');
+						
+				$('#step1 .offers').removeClass('checked');
+				$this.addClass('checked');
+
+				$('#step1').addClass('selected-step');
+				$('#step1 .selection-'+selection).removeClass('hidden');
+
+				CN.offers.bindLinks();
+				
+				CN.offers.changeToStep('2');
+				return false;
+			});
+
+			$('.payments').on('click', function(){
+				$this = $(this),
+				selection = $this.data('selection');
+
+				//toggle active class
+				$('#step2 .payments').removeClass('active');
+				$this.addClass('active');
+
+				$('#step2').addClass('selected-step');
+				$('#step2 .selection-'+selection).removeClass('hidden');
+
+				CN.offers.changeToStep('3');
+				return false;
+			})
+
+		});
+	</script>
+
+</body>
+</html>
