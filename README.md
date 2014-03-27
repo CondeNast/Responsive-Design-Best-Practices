@@ -99,11 +99,14 @@ body { background-size: contain; }
 
 Similar to max-width, this style makes the background fluid and respond to the varying widths of the devices.
 
-Another thing we need to overcome is iOS resizing the page automatically. To overcome this and make the page respond responsively, we need to adjust how the browser sees the widths of the images. Adding this to the <head> will compensate!
+Another thing we need to overcome is iOS resizing the page automatically. To overcome this and make the page respond responsively, we need to adjust how the browser sees the widths of the images. Adding this to the `<head>` will compensate!
 
 ```
 <meta name="viewport" content="width=device-width; initial-scale=1.0">
 ```
+
+Lastly, using sprites is a great way to minimize server requests for images, but we encounter trouble when using them as background images as the `background-size: contain` uses the entire image and won't allow us to scale just the section we like.
+
 
 ## Media Queries
 
