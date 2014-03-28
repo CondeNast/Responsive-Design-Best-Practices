@@ -9,7 +9,7 @@ Being responsive allows you to use the same code to serve different platforms an
 
 ### So how do we do this?
 
-This repo contains example files of a non-responsive file (CM-offer.html) converted to responsive (CM-offer-responsive.hmtl). This file is used for promotion of subscription offers for Bon Appetit. Ideally you begin the process with responsive in mind, but this example shows how to convert an existing page to a responsive design.
+This repo contains example files of a non-responsive file (CM-offer.html) converted to responsive (CM-offer-responsive.html). This file is used for promotion of subscription offers for Bon Appetit. Ideally you begin the process with responsive in mind, but this example shows how to convert an existing page to a responsive design.
 
 What you'll see is all the inline styles and same-page `<style>` moved to an external file. We've reduced the unnecessary HTML and updated the classes to be more self-describing in nature. We've also created a new JS object (CN.offers) that serves to abstract the functions of the page and increase visibility and reduce redundant code. Sounds crazy? Keep reading and we'll explain everything!
 
@@ -22,7 +22,7 @@ Let's start with HTML!
 
 ## HTML
 
-Let's think of building a responive webpage as building a new house. Or Mansion. Or Brownstone. Either way HTML can be thought of as the frame. It's the support we build on and around and really doesn't change that much throughout the process. Because of this, and costs, we want only have whats necessary to support our house and floors. That's what we mean by lean HTML markup; unique IDs and consistent, self-described classes that signify the roles of the element without bloat. Minimilistic markup keeps the weight down and makes construction a lot easier and transparent.
+Let's think of building a responive webpage as building a new house. Or Mansion. Or Brownstone. I love Brownstones. Either way HTML can be thought of as the frame. It's the support we build on and around and really doesn't change that much throughout the process. Because of this, and costs, we want only have whats necessary to support our house and floors. That's what we mean by lean HTML markup; unique IDs and consistent, self-described classes that signify the roles of the element without bloat. Minimilistic markup keeps the weight down and makes construction a lot easier and transparent.
 
 Less is more. Only include elements that you need! If you see elements without CSS or JS applied to them, condense the code and get rid of unneccessary markup. For example, if you have JS attached the the click event
 
@@ -38,7 +38,18 @@ consider making it.
 ```
 See how minimalistic you can get!
 
-Follow common markup practices! The most common practice is to create a container (or wrapper!) element, with header, main content and footer elements within. This is the most minimilistic we can go with house frame.
+Follow common markup practices! The most common is to create a container (or wrapper!) element, with header, main content and footer elements within. This is the beginning of our zen house frame.
+
+```
+<body>
+	<div id="wrapper">
+		<div id="header"></div>
+		<div id="content"></div>
+		<div id="footer"></div>
+	</div>
+</body>
+```
+
 
 IDs usually describe a unique “section”, and classes make up different parts of that section. Navigation is an example of a unique section. The different steps of the subscribe pages each have unique IDs but share common classes.
 
