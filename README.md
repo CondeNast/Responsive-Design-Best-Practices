@@ -22,7 +22,7 @@ Let's start with HTML!
 
 ## HTML
 
-Let's think of building a responive webpage as building a new house. Or Mansion. Or Brownstone. I love Brownstones. Either way HTML can be thought of as the frame. It's the support we build on and around and really doesn't change that much throughout the process. Because of this, and costs, we want only have whats necessary to support our house and floors. That's what we mean by lean HTML markup; unique IDs and consistent, self-described classes that signify the roles of the element without bloat. Minimilistic markup keeps the weight down and makes construction a lot easier and transparent.
+Let's think of building a responive webpage as building a new house. Or Mansion. Or Brownstone. I love Brownstones. Either way HTML can be thought of as the frame. It's the support we build on and around and really doesn't change that much throughout the process. Because of this, and costs, we want only have whats necessary to support our house and floors. That's what we mean by lean HTML; unique IDs and consistent, self-described classes that signify the roles of the element without bloat. Minimilistic markup keeps the weight down and makes construction a lot easier and transparent.
 
 Less is more. Only include elements that you need! If you see elements without CSS or JS applied to them, condense the code and get rid of unneccessary markup. For example, if you have JS attached the the click event
 
