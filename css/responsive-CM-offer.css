@@ -1,0 +1,419 @@
+	/* Base styles for desktop that are overwritten for responsive via cascading media queries */
+	body {
+		background-image:url(https://subscribe.bonappetit.com/circulation/bonappetit/images/BA-HYBRID-Backgroud.jpg);
+		margin-left:auto;
+		margin-right:auto;
+		font-family: Verdana,Arial,sans-serif;
+		font-size: 100%;
+		line-height: 1.375;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	img {
+		max-width:100%;
+	}
+
+	.clearfix:after, .banner:after, .mod-b:after, .gallery__pager:after, .account-summary__thanks:after, .tabs-nav:after, .media:after, .header__banner:after, .form-row:after, .radio-cards:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	#header {
+	    max-width:1235px;
+	    margin-left:auto;
+	    margin-right:auto;
+	}
+	.sub-header {
+		text-align: center;
+	}
+
+	#content {
+		width:1002px;
+		margin:0 auto;
+	}
+
+	.folded .step-body {
+		display:none;
+	}
+
+	.unfolded .step-body {
+		display:block;
+	}
+
+	.step-body {
+		background: url('https://subscribe.bonappetit.com/circulation/bonappetit/images/BlueBackground2014.png') repeat-y;
+		overflow: hidden;
+	}
+
+	.step-details{
+		position: relative;
+		padding: 43px 0 0 0;
+	}
+
+	.sub-footer {
+		padding:15px 0 0 0;
+		clear:both;
+	}
+
+	#step1 .sub-footer {
+		padding: 0;
+	}
+
+	.step-details {
+		margin-left:80px;
+	}
+
+	#step1 .best-offer-ribbon {
+		position: absolute;
+		top: 35px;
+	}
+
+	#step1 .offer-link {
+		display: block;
+		text-decoration: none;
+		border: 4px solid transparent; // offset the black border for checkbox positioning
+	}
+
+	#step1 .offer-link:hover {
+		border: 4px solid #000;
+		border-radius: 10px;
+	}
+
+	#step1 .step-details {
+		background-image: url('https://subscribe.bonappetit.com/circulation/bonappetit/images/NEW_BNAOFFERSFeb2014.png');
+		background-repeat: no-repeat;
+		background-position: -17 0;	
+	}
+
+
+	#step1 .offers,
+	#step1 #gift-offer {
+		display: block;
+		width:382px;
+		height:211px;
+		float: left;
+		margin-left: 47px;
+	}
+
+	#step1 .check-option {
+		position: relative;
+		top:23px;
+		left:42%;
+	}
+
+	#step1 #offer-2 .check-option {
+		left:41%;
+	}
+
+	#step1 .check-option span {
+		display: block;
+		background-repeat: no-repeat;
+		width:25px;
+		height:25px;		
+	}
+
+	#step1 .check-option span{
+		background-image: url(https://subscribe.bonappetit.com/circulation/golfdigest/images/GLFRadiosOff2014.gif);
+	}
+
+	#step1 .checked .check-option span{
+		background-image: url(https://subscribe.bonappetit.com/circulation/golfdigest/images/GLFRadiosOn2014.gif);
+	}
+
+	#step1 .offers h5 {
+		color:#22b9f1;
+		font-size:16px;
+		font-weight:bold;
+		margin: 40% 0 0 47%;
+		width: 195px;
+		padding: 0;
+	}
+
+	#step1 .step-details #offer-1 {
+		background-position: -69 -45;
+	}
+
+	#step1 .step-details #offer-2 {
+		margin-left:33px;
+		background-position: -489 -44;
+	}
+
+	#step1 #gift-offer {
+		width:100%;
+		height:69px;
+		float:none;
+		background-position: -18 -270;
+	}
+
+	#step2 .step-details {
+		margin: 0;
+		padding:0;
+		background-image: url('https://subscribe.bonappetit.com/circulation/bonappetit/images/BAoffer2014cab.png');
+		background-repeat: no-repeat;
+		background-position: 50% 35px;
+		height: 320px;
+	}
+
+	#step2 .payments {
+		width:383px;
+		height:216px;
+		float: left;
+		margin: 36px 0 0 95px;
+		display: block;
+		text-decoration: none;
+		border: 4px solid transparent; /* offset the black border for checkbox positioning */
+	}
+
+	#step2 .payments:hover,
+	#step2 .payments.active {
+		border: 4px solid #000;
+		border-radius: 10px;
+	}
+
+	#step2 #payment-2.payments {
+		margin-left: 31px;
+	}
+
+	#step3 .step-details {
+		margin:0 auto;
+		width: 800px;
+	}
+
+	.selections,
+	.folded .selection.hidden,
+	.unfolded.selected-step .selections{
+		display: none;
+	}
+
+	.folded .selections {
+		padding: 15px 15px 15px 98px;
+		background-image: url(https://subscribe.bonappetit.com/circulation/bonappetit/images/GreyBackground2014.png);
+		box-sizing: content-box;
+		font-style: italic;
+	}
+
+	.selected-step .selections {
+		display:block;
+	}
+
+	.selection a,
+	.selection a:visited {
+		color: #000;
+		text-decoration: underline;
+	}
+
+	.selections h4 {
+		margin:0;
+	}
+
+	.text input {
+		width:100%;		
+		height: 36px;
+		border: 1px solid #d6d6d6;
+		padding: 10px 14px;
+		font-size: 16px;
+		background: #fff;
+	}
+
+	.form-fields {
+		padding: 0 0 20px;
+	}
+
+	.form-col {
+		width: 49.57983%;
+		float: left;
+		margin-right: .84034%;
+	}
+
+	.form-col.form-col--sm {
+		width: 24.36975%;
+		float: left;
+		margin-right: .84034%;
+	}
+
+	.form-col.is-last {
+		float: right;
+		margin-right: 0;
+	}
+
+	.margin-bl {
+		margin-bottom: 20px!important;
+	}
+
+	.mod-a__sub-hdg__quiet {
+		font-size: 12px;
+		font-size: .75rem;
+		font-family: Verdana,Arial,sans-serif;
+		color: #000;
+	}
+
+	.text,
+	.select {
+		margin: 0 0 15px;
+		position: relative;
+	}
+
+	.text select,
+	.select select {
+		padding: 5px 14px 5px 12px;
+	}
+
+	.text input,
+	.text select,
+	.select input,
+	.select select {
+		height: 36px;
+	}
+
+	.text input, .text select, .text textarea, .select input, .select select, .select textarea {
+		border: 1px solid #d6d6d6;
+		padding: 10px 14px;
+		font-size: 16px;
+		background: #fff;
+	}
+
+	.text input, .text select, .text textarea, .select input, .select select, .select textarea {
+		width: 100%;
+	}
+
+	.text-xxsm, .main--confirm .trending, .input-link {
+		font-family: Verdana,Arial,sans-serif;
+		font-size: 12px;
+		font-size: .75rem;
+	}
+
+	.btn-next {
+		display: inline-block;
+		margin-bottom: 10px;
+		padding: 0 11px 0 0;
+		height: 55px;
+		width: 400px;
+		border: 0;
+		color: #fff200;
+		font-size: 23px;
+		font-size: 1.4375rem;
+		line-height: 55px;
+		text-shadow: 0 1px 1px rgba(0,0,0,.65);
+		text-indent: -245px;
+		background: url('https://subscribe.bonappetit.com/circulation/bonappetit/images/BASubmit20feb2014a.png') no-repeat;
+		vertical-align: middle;
+		outline: 0;
+		text-align: center;
+		font-family: "NeutrafaceTextBold";
+		font-weight: 400;
+	}
+
+	#footer {
+		color:#fff;
+		text-align: center;
+		font-size: 10px;
+		padding:50px 60px 30px;
+		box-sizing: border-box;
+	}
+
+	/* 
+	 * In this example we are cascading from the largest screen size to the smallest. 
+	 * It's personal preference to what you are most comfortable understanding.
+	 * I did it this way since a lot of the screen sizes share common code.
+	 */
+
+	/* Everything up to iPad landscape */
+	@media screen and (max-width : 1024px) {
+		#wrapper {
+		    max-width:100%;
+		    padding:0 10px;
+			box-sizing: border-box;
+		}
+
+		#wrapper,
+		#header,
+		#content {
+		    max-width:100%;
+			box-sizing: border-box;
+		}
+
+		.step-body {
+			background-size:contain;
+		}
+			
+		#step3 .step-details {
+			margin: 0 auto;
+			width: 800px;
+		}
+	}
+
+	/* Everything up to iPad portrait */
+	@media screen and (max-width : 768px) {
+
+		.step-details {
+			margin-left:24px;
+			background-size: contain;
+			padding: 32px 0 0 0;
+		}
+
+		#step1 .best-offer-ribbon {
+			top: 23px;
+			width: 125px;
+		}
+
+		#step1 .best-offer-ribbon img {
+			height: auto;
+		}
+
+		#step1 .offers {
+			width: 302px;
+			height: 170px;
+			margin-left: 33px;
+		}
+
+		#step1 .check-option {
+			top: 15px;
+			left: 123px;
+		}
+
+		#step1 #offer-2 .check-option {
+			left: 121px;
+		}
+
+		#step1 .step-details #offer-2 {
+			margin-left: 23px;
+		}
+
+		#step1 .offers h5 {
+			font-size: 13px;
+			margin: 36% 0 0 136px;
+		}
+
+		#step1 #gift-offer {
+			height: 58px;
+		}
+
+		#step2 .step-details {
+			background-size: 85%;
+			height: 260px;
+		}
+
+		#step2 .payments {
+			width: 301px;
+			height: 170px;
+			margin: 35px 0 0 54px;
+		}
+
+		#step2 #payment-2.payments {
+			margin-left: 23px;
+		}	
+
+		#step3 .step-details {
+			width: 675px;
+		}
+
+	}
+
+	/* iPhone portrait */
+	@media screen and (min-width : 320px) {
+	}
+
+	/* iPhone landscape */
+	@media screen and (min-width : 380px) {
+	}
