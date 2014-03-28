@@ -125,7 +125,7 @@ Using multiple media queries allow us to target specific ranges of widths, which
 }
 
 /* iPhone landscape */
-@media screen and (max-width : 380px) {
+@media screen and (min-width : 380px) {
 	#navbar { display : none; }
 }
 ```
