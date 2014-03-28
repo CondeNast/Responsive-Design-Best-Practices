@@ -7,7 +7,14 @@ Hey! So you want to go responsive? I’m proud of you. There is a lot of info ou
 
 Being responsive allows you to use the same code to serve different platforms and devices, which reduces the amount of requests made to fetch resources. A mobile-first approach is trending heavily now, which forces you to approach the development and design of a website from a broader perspective than a traditional desktop site. 
 
-So how do we do this? This repo contains example files of a non-responsive file (CM-offer.html) converted to responsive (CM-offer-responsive.hmtl). Ideally you begin the process with responsive in mind, but this example shows how to convert an existing page to a responsive design.
+### So how do we do this?
+
+This repo contains example files of a non-responsive file (CM-offer.html) converted to responsive (CM-offer-responsive.hmtl). This file is used for promotion of subscription offers for Bon Appetit. Ideally you begin the process with responsive in mind, but this example shows how to convert an existing page to a responsive design.
+
+What you'll see is all the inline styles and same-page `<style>` moved to an external file. We've reduced the unnecessary HTML and updated the classes to be more self-describing in nature. We've also created a new JS object (CN.offers) that serves to abstract the functions of the page and increase visibility and reduce redundant code. Sounds crazy? Keep reading and we'll explain everything!
+
+
+### The sky is the limit.
 
 We'll cover the basics that will get you started down the responsive path, which include separating styling from markup using Cascading Style Sheets (CSS), lean and concise HyperText Markup Language (HTML) and object-oriented Javascript (JS).
 
