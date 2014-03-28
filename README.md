@@ -58,7 +58,7 @@ IDs usually describe a unique “section”, and classes make up different parts
 </div>
 ```
 
-HTML is the framework, so where do we look for the dimensions of the walls, colors of. The blueprint.
+If HTML is the framework, where do we look for the dimensions of the house or the colors of walls? The blueprint and design plan: CSS.
 
 ## CSS
 
@@ -66,7 +66,7 @@ CSS is extremely powerful, and with it we can create wildly different designs us
 
 Inline styles!? Move those bad boys into semantically fresh stylesheets and take advantage of cascading power! (Cascading is the Machiavellian approach of overwriting previous styles with new ones later in the document, which comes in handy for responsive as we’ll see). The reason we shy away from inline is because it’s separate from the rest of the code and harder to debug. It also acts as the final rule and overrides any code in the stylesheets.
 
-In addition the more specific you are with your declarations the more precise you have to be overwriting them. So if you use parent classes for one style and want to change the rule for mobile, you have to be just as precise.
+In addition the more specific you are with your declarations the more precise you have to be overwriting them. So if you use parent classes for one style and want to change the rule for mobile, you have to be just as precise. Take a look at a piece from our code:
 
 ```
 #step1 .step-details #offer-2 {
@@ -76,11 +76,17 @@ In addition the more specific you are with your declarations the more precise yo
 
 ...
 
-#step1 .step-details #offer-2 {
-	margin-left: 23px;
+@media screen and (max-width : 768px) {
+
+	#step1 .step-details #offer-2 {
+		margin-left: 23px;
+	}
 }
 
 ```
+
+The first declaration sets the style for desktop. Then in a media query we overwrite it for everything that is smaller than 768px in width.
+
 The one instance you can supercede a previous rule without matching the class structure is by using the “!important” declaration.
 
 ```
