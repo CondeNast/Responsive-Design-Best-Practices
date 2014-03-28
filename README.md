@@ -15,7 +15,7 @@ Let's start with HTML!
 
 ## HTML
 
-Start by creating lean HTML markup with unique IDs and classes that help describe the role of the element. 
+Let's think of building a responive webpage as building a new house. Or Mansion. Or Brownstone. Either way HTML can be thought of as the frame. It's the support we build on and around and really doesn't change that much throughout the process. Because of this, and costs, we want only have whats necessary to support our house and floors. That's what we mean by lean HTML markup; unique IDs and consistent, self-described classes that signify the roles of the element without bloat. Minimilistic markup keeps the weight down and makes construction a lot easier and transparent.
 
 Less is more. Only include elements that you need! If you see elements without CSS or JS applied to them, condense the code and get rid of unneccessary markup. For example, if you have JS attached the the click event
 
@@ -31,7 +31,7 @@ consider making it.
 ```
 See how minimalistic you can get!
 
-Follow common markup practices! Create a container (or wrapper!) element, with header, main content and footer elements within.
+Follow common markup practices! The most common practice is to create a container (or wrapper!) element, with header, main content and footer elements within. This is the most minimilistic we can go with house frame.
 
 IDs usually describe a unique “section”, and classes make up different parts of that section. Navigation is an example of a unique section. The different steps of the subscribe pages each have unique IDs but share common classes.
 
@@ -58,8 +58,11 @@ IDs usually describe a unique “section”, and classes make up different parts
 </div>
 ```
 
+HTML is the framework, so where do we look for the dimensions of the walls, colors of. The blueprint.
 
 ## CSS
+
+CSS is extremely powerful, and with it we can create wildly different designs using the same foundation with ease. Check out <a href="http://www.csszengarden.com">CSS Zen Garden</a> as an example of what people can do with the same HTML and only changing the CSS.
 
 Inline styles!? Move those bad boys into semantically fresh stylesheets and take advantage of cascading power! (Cascading is the Machiavellian approach of overwriting previous styles with new ones later in the document, which comes in handy for responsive as we’ll see). The reason we shy away from inline is because it’s separate from the rest of the code and harder to debug. It also acts as the final rule and overrides any code in the stylesheets.
 
