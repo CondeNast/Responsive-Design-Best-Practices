@@ -51,7 +51,7 @@ Follow common markup practices! The most common is to create a container (or wra
 ```
 
 
-IDs usually describe a unique “section”, and classes make up different parts of that section. Navigation is an example of a unique section. The different steps of the subscribe pages each have unique IDs but share common classes.
+IDs describe a unique “section” and can only be used once. Classes can and should be reused, and make up different parts of that section. This allows us to reuse style code, and JS event binding efficiently. Navigation is an example of when to use an ID. In our example pages, the different steps of the subscribe pages each have unique IDs but share common classes.
 
 ```
 <div id="step1" class="steps unfolded">
