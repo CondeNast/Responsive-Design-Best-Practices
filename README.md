@@ -13,7 +13,19 @@ The basics:
 
 Start by creating lean HTML markup with unique IDs and classes that help describe the role of the element. 
 
-Less is more. Only include elements that you need! 
+Less is more. Only include elements that you need! If you see elements without CSS or JS applied to them, condense the code and get rid of unneccessary markup. For example, if you have JS attached the the click event
+
+```
+<div class="container"><div><a class="has-JS-attached" href="#"><button>Click me!</button></a></button></div></div>
+
+```
+consider making it. See how minimalistic you can get.
+
+```
+<button class="container has-JS-attached">Click me!</button>
+
+```
+
 
 Follow common markup practices! Create a container (or wrapper!) element, with header, main content and footer elements within.
 
