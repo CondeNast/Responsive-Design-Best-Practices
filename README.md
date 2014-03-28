@@ -5,9 +5,13 @@ Hey! So you want to go responsive? I’m proud of you. There is a lot of info ou
 
 ### First, what is responsive design?
 
-Being responsive allows you to use the same code to serve different platforms and devices, which reduces the amount of requests made to fetch resources. A mobile-first approach is trending heavily now, which forces you to approach the development and design of a website from a broader perspective than a traditional desktop site. So how do we do this?
+Being responsive allows you to use the same code to serve different platforms and devices, which reduces the amount of requests made to fetch resources. A mobile-first approach is trending heavily now, which forces you to approach the development and design of a website from a broader perspective than a traditional desktop site. 
 
-The basics:
+So how do we do this? This repo contains example files of a non-responsive file (CM-offer.html) converted to responsive (CM-offer-responsive.hmtl). Ideally you begin the process with responsive in mind, but this example shows how to convert an existing page to a responsive design.
+
+We'll cover the basics that will get you started down the responsive path, which include separating styling from markup using Cascading Style Sheets (CSS), lean and concise HyperText Markup Language (HTML) and object-oriented Javascript (JS).
+
+Let's start with HTML!
 
 ## HTML
 
@@ -19,17 +23,17 @@ Less is more. Only include elements that you need! If you see elements without C
 <div class="container"><div><a class="has-JS-attached" href="#"><button>Click me!</button></a></button></div></div>
 
 ```
-consider making it. See how minimalistic you can get.
+consider making it.
 
 ```
 <button class="container has-JS-attached">Click me!</button>
 
 ```
-
+See how minimalistic you can get!
 
 Follow common markup practices! Create a container (or wrapper!) element, with header, main content and footer elements within.
 
-IDs usually describe a unique “section”, and classes make up different parts of that section. Navigation is a unique section. The different steps of the subscribe pages each have unique IDs but share common classes.
+IDs usually describe a unique “section”, and classes make up different parts of that section. Navigation is an example of a unique section. The different steps of the subscribe pages each have unique IDs but share common classes.
 
 ```
 <div id="step1" class="steps unfolded">
