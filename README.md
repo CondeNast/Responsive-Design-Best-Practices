@@ -151,6 +151,10 @@ Use Modernizr to see what features and capabilities are present with your curren
 
 http://modernizr.com/
 
+#### Browser plugins
+
+<a href="https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh">Window Resizer</a> for Google Chrome.
+
 
 ## Javascript
 
