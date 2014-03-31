@@ -84,7 +84,11 @@ CSS is extremely powerful, and with it we can create wildly different designs us
 
 ### Step up your style game
 
-Inline styles!? Move those bad boys into semantically fresh stylesheets and take advantage of cascading power! (Cascading is the Machiavellian approach of overwriting previous styles with new ones later in the document, which comes in handy for responsive as we’ll see). The reason we shy away from inline is because it’s separate from the rest of the code and harder to debug. It also acts as the final rule and overrides any code in the stylesheets.
+Let's talk common practice. Inline styles!? Move those bad boys into semantically fresh stylesheets and take advantage of cascading power! (Cascading is the Machiavellian approach of overwriting previous styles with new ones later in the document, which comes in handy for responsive as we’ll see). The reason we shy away from inline is because it’s separate from the rest of the code and harder to debug. It also acts as the final rule and overrides any code in the stylesheets.
+
+With responsive site's you'll also see content stacked as the screen gets smaller, which is great way to conserve space.
+
+Another popular trend that has become common practice is hidding the navigation on smaller devices and replacing it with 3 bars, which a click then expands showing the links.
 
 In addition the more specific you are with your declarations the more precise you have to be overwriting them. So if you use parent classes for one style and want to change the rule for mobile, you have to be just as precise. Take a look at a piece from our code:
 
