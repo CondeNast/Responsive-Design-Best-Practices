@@ -276,6 +276,7 @@ And iPad portrait at line 347:
 @media screen and (max-width : 768px) {
 ```
 
+Now it's time to create the rules for our smaller mobile devices, the iPhone portrait and landscape. The media queries are included in the CSS file, so what can we do to make it happen?
 
 #### Get the right assets
 
@@ -287,7 +288,7 @@ Override the `.step-details` background-images to be transparent, and with your 
 
 #### Stack stack stack!
 
-I've included the media queries for the iPad landscape and portrait version, see if you can adjust the offers and payment options to be vertical, one on top of the other. 
+Adjust the offers and payment options to be vertical, one on top of the other, when viewed in the iPhone.
 
 #### Fourthly
 
