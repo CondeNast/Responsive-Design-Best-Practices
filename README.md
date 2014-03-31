@@ -273,21 +273,21 @@ And iPad portrait at line 347:
 ```
 
 
-#### Firstly
+#### Get the right assets
 
-Get non-sprite images for the offer backgrounds (https://subscribe.bonappetit.com/circulation/bonappetit/images/NEW_BNAOFFERSFeb2014.png). This is a necessity as we reduce screen widths and need to stack items.
+Get separate images for the offer backgrounds (https://subscribe.bonappetit.com/circulation/bonappetit/images/NEW_BNAOFFERSFeb2014.png) and payment method types (https://subscribe.bonappetit.com/circulation/bonappetit/images/BAoffer2014cab.png). This is a necessity as we reduce screen widths and need to stack items and can't rely on shrinking the one larger image.
 
-#### Secondly
+#### Use the new assets
 
-Override the `.step-details` background-images to be transparent, and with your new individual images created from the first step, update each `.offers` and `.payments` div to the appropriate background using `background-size: contain`. 
+Override the `.step-details` background-images to be transparent, and with your new individual images created from the first step, update each `.offers` and `.payments` div to the appropriate background, which should inherit the  `background-size: contain` style. 
 
-#### Thirdly
+#### Stack stack stack!
 
-I've included the media queries for the iPad landscape and portrait version, see if you can adjust the placement of the offers and payment options to be vertical, one on top of the other. 
+I've included the media queries for the iPad landscape and portrait version, see if you can adjust the offers and payment options to be vertical, one on top of the other. 
 
 #### Fourthly
 
-Elimante the use the sprite image from step 1 altogether by making the desktop view using the individual images.
+Eliminate the use the large combined image from step 1 altogether by making the desktop view using the individual images.
 
 
 
