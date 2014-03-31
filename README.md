@@ -288,11 +288,11 @@ Override the `.step-details` background-images to be transparent, and with your 
 
 #### Stack stack stack!
 
-Adjust the offers and payment options to be vertical, one on top of the other, when viewed in the iPhone.
+Adjust the offers and payment options to be vertical, one on top of the other, when viewed in the iPhone. Mimic the wrapper behavior for width and use padding if necessary. You'll have some artistic license as this wasn't designed for mobile
 
 #### Fourthly
 
-Eliminate the use the large combined image from step 1 altogether by making the desktop view using the individual images.
+Eliminate the use of the large combined images from step 1 altogether by making the desktop view using the individual images.
 
 
 
