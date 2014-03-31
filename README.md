@@ -5,7 +5,7 @@ Hey! So you want to go responsive? I’m proud of you. There is a lot of info ou
 
 ### First, what is responsive design?
 
-Being responsive allows you to use the same code to serve different platforms and devices, which reduces the amount of requests made to fetch resources. A mobile-first approach is trending heavily now, which forces you to approach the development and design of a website from a broader perspective than a traditional desktop site. 
+Being responsive allows you to use the same code to serve different platforms and devices, which reduces the amount of requests made to fetch resources. A mobile-first approach is trending heavily now, which forces you to approach the development and design of a website from the smallest to largest view, giving you a broader perspective than a traditional desktop site. 
 
 ### So how do we do this?
 
@@ -22,7 +22,7 @@ Let's start with HTML!
 
 ## HTML
 
-Let's think of building a responive webpage as building a new house. Or Mansion. Or Brownstone. I love Brownstones. Either way HTML can be thought of as the frame, a representation of a technical drawing without any firm dimensions. It's the support we build on and around and really doesn't change that much throughout the process. Because of this, and costs, we want only have whats necessary to support our house and floors. That's what we mean by lean HTML; unique IDs and consistent, self-described classes that signify the roles of the element without bloat. Minimilistic markup keeps the weight down and makes construction a lot easier and transparent.
+Let's think of building a responive webpage as building a new Brownstone. I love Brownstones. The HTML can be thought of as the frame, a representation of a technical drawing without any firm dimensions. It's the support we build on and around and really doesn't change that much throughout the process. Because of this, and costs, we want only have whats necessary to support our house and floors. That's what we mean by lean HTML; unique IDs and consistent, self-described classes that signify the roles of the element without bloat. Minimilistic markup keeps the weight down and makes construction a lot easier and transparent.
 
 Less is more. Only include elements that you need! If you see elements without CSS or JS applied to them, condense the code and get rid of unneccessary markup. For example, if you have JS attached the `a` click event
 
@@ -80,7 +80,9 @@ This is why planning is important because reducing redunancy and creating transp
 
 ## CSS
 
-CSS is extremely powerful, and with it we can create wildly different designs using the same foundation with ease. Check out <a href="http://www.csszengarden.com">CSS Zen Garden</a> as an example of what people can do with the same HTML and only changing the CSS. This is why having a clear idea of mobile to desktop is important ahead of time; it allows the developer to plan and create as simple a blueprint as necessary based on a zen HTML foundation.
+CSS is extremely powerful, and with it we can create wildly different designs using the same foundation with ease. Check out <a href="http://www.csszengarden.com">CSS Zen Garden</a> as an example of what people can do with the same HTML and only changing the CSS. This is why having a clear idea of mobile to desktop is important ahead of time; it allows the developer to plan and create as simple a blueprint as necessary based on a zen HTML foundation. In our Brownstone example, the CSS let's us change the number of floors, increase and decrease widths, all sorts of things that we couldn't do in real life using the same frame, but in the digital world we do and see everyday.
+
+### Step up your style game
 
 Inline styles!? Move those bad boys into semantically fresh stylesheets and take advantage of cascading power! (Cascading is the Machiavellian approach of overwriting previous styles with new ones later in the document, which comes in handy for responsive as we’ll see). The reason we shy away from inline is because it’s separate from the rest of the code and harder to debug. It also acts as the final rule and overrides any code in the stylesheets.
 
@@ -138,7 +140,9 @@ This tells the image to be as big as it’s container, until it’s natural size
 
 Speaking of background images, how do we get them to scale? Use background-size baby! 
 
+```
 body { background-size: contain; }
+```
 
 Similar to max-width, this style makes the background fluid and respond to the varying widths of the devices.
 
