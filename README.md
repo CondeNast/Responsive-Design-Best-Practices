@@ -210,9 +210,11 @@ http://getbootstrap.com/css/
 
 Don’t recreate the responsive wheel! Take advantage of what’s out there to help your project.
 
-Reset browser defaults!
+#### Reset browser defaults!
 
 http://meyerweb.com/eric/tools/css/reset/
+
+#### Take your broswer out to dinner!
 
 Use Modernizr to see what features and capabilities are present with your current environment!
 
