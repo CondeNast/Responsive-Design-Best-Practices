@@ -248,7 +248,6 @@ $(‘.link’).on('click touchstart touchmove touchend', function(e){
 Responsive design eliminates redirections and subdomains that we see when using solutions like Mobify, reduces redundant code, and makes maintenance a lot easier. The additional planning and strategy time incurred in the beginning is well justified given the benefits of the responsive strategy.
 
 
-
 ### Responsive websites
 
 Mashable is a great example of responsive design. The site still uses Wordpress too!
@@ -256,6 +255,40 @@ Mashable is a great example of responsive design. The site still uses Wordpress 
 http://www.mashable.com
 
 http://www.awwwards.com/websites/responsive-design/
+
+### Next steps
+
+So you've read about houses, magic CSS and max-widths, now what do you do with it all? Let's apply these learnings and make the CM-offer-responsive.html even more responsivey. We have our Zen foundation, complete with wrapper, header, content and footers, and CSS.
+
+Open up the CSS folder and take a look at responsive-CM-offer.css. We start with some general rules, and work our way down our framework piece by piece, building up the foundation. Soon we have enough for our desktop view. Then from line 322 to 346 we have the media query for our next view, the iPad landscape:
+
+```
+@media screen and (max-width : 1024px) {
+```
+
+And iPad portrait at line 347:
+
+```
+@media screen and (max-width : 768px) {
+```
+
+
+#### Firstly
+
+Get non-sprite images for the offer backgrounds (https://subscribe.bonappetit.com/circulation/bonappetit/images/NEW_BNAOFFERSFeb2014.png). This is a necessity as we reduce screen widths and need to stack items.
+
+#### Secondly
+
+Override the `.step-details` background-images to be transparent, and with your new individual images created from the first step, update each `.offers` and `.payments` div to the appropriate background using `background-size: contain`. 
+
+#### Thirdly
+
+I've included the media queries for the iPad landscape and portrait version, see if you can adjust the placement of the offers and payment options to be vertical, one on top of the other. 
+
+#### Fourthly
+
+Elimante the use the sprite image from step 1 altogether by making the desktop view using the individual images.
+
 
 
 
