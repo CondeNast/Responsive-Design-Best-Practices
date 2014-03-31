@@ -9,7 +9,7 @@ Being responsive allows you to use the same code to serve different platforms an
 
 ### So how do we do this?
 
-This repo contains example files of a non-responsive file (CM-offer.html) converted to responsive (CM-offer-responsive.html). This file is used for promotion of subscription offers for Bon Appetit. Ideally you begin the process with responsive in mind, but this example shows how to convert an existing page to a responsive design.
+This repo contains example files of a non-responsive file (CM-offer.html) converted to responsive (CM-offer-responsive.html). This file is used for promotion of subscription offers for Bon Appetit, and is stored in a template via a promotion system called Circules. Ideally you begin the process with responsive in mind, but this example shows how to convert an existing page to a responsive design.
 
 What you'll see is all the inline styles and same-page `<style>` moved to an external file. We've reduced the unnecessary HTML and updated the classes to be more self-describing in nature. We've also created a new JS object (CN.offers) that serves to abstract the functions of the page and increase visibility and reduce redundant code. Sounds crazy? Keep reading and we'll explain everything!
 
@@ -80,7 +80,7 @@ This is why planning is important because reducing redunancy and creating transp
 
 ## CSS
 
-CSS is extremely powerful, and with it we can create wildly different designs using the same foundation with ease. Check out <a href="http://www.csszengarden.com">CSS Zen Garden</a> as an example of what people can do with the same HTML and only changing the CSS.
+CSS is extremely powerful, and with it we can create wildly different designs using the same foundation with ease. Check out <a href="http://www.csszengarden.com">CSS Zen Garden</a> as an example of what people can do with the same HTML and only changing the CSS. This is why having a clear idea of mobile to desktop is important ahead of time; it allows the developer to plan and create as simple a blueprint as necessary based on a zen HTML foundation.
 
 Inline styles!? Move those bad boys into semantically fresh stylesheets and take advantage of cascading power! (Cascading is the Machiavellian approach of overwriting previous styles with new ones later in the document, which comes in handy for responsive as we’ll see). The reason we shy away from inline is because it’s separate from the rest of the code and harder to debug. It also acts as the final rule and overrides any code in the stylesheets.
 
@@ -153,7 +153,7 @@ Lastly, using sprites is a great way to minimize server requests for images, but
 
 ## Media Queries
 
-Whether it’s a fluid design or multi-column, a responsive website needs to be told how to react to the different widths of their viewports. The most popular and useful way is through media queries, which allow us to specify a block of code for specific instances. If we want to hide the navbar only on mobile devices with widths smaller than 380px, we would use a media query to make that happen.
+These are the golden switches which magically change the look and feel of our responsive page. If this was literally a housebuilding project we would have to use magic to make this happen. Whether it’s a fluid design or multi-column, a responsive website needs to be told how to react to the different widths of their viewports. The most popular and useful way is through media queries, which allow us to specify a block of code for specific instances. If we want to hide the navbar only on mobile devices with widths smaller than 380px, we would use a media query to make that happen.
 
 ```
 @media screen and (max-width : 380px) {
@@ -173,6 +173,26 @@ Using multiple media queries allow us to target specific ranges of widths, which
 }
 ```
 
+We can also specify resolution
+
+```
+@media (-webkit-min-device-pixel-ratio: 2) { 
+    /* Retina-specific stuff here */
+}
+```
+
+orientation
+```
+@media (min-width: 700px) and (orientation: landscape) { ... }
+```
+and have multiple queries
+```
+@media all and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {
+  body {
+    background: #ccc;
+  }
+}
+```
 There are a lot of tutorials online, so we won’t go in depth here, but with responsive design I’ve encountered two main philosophies: Create breakpoints per device or per design. What this means is you can code for an iPhone or iPad like above, where you know the width. But with new devices coming out all the time, I believe the best approach is to come up with a fluid design that molds itself to any screen width. This creates media queries with different max and min widths that aren’t linked to devices but rather to the design.
 
 
