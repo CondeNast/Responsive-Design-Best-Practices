@@ -409,11 +409,12 @@
 		}
 
 	}
-
-	/* iPhone portrait */
-	@media screen and (min-width : 320px) {
+	
+	/* up to iPhone landscape */
+	@media screen and (max-width : 380px) {
 	}
 
-	/* iPhone landscape */
-	@media screen and (min-width : 380px) {
+	/* up to iPhone portrait */
+	@media screen and (max-width : 320px) {
 	}
+
